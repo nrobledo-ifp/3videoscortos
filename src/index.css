@@ -1,0 +1,834 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Fredoka:Bold";
+  src: url("https://static.figma.com/font/Fredoka_wdth_wght__1") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Space Grotesk:Regular";
+  src: url("https://static.figma.com/font/SpaceGrotesk_wght__1") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --blue: #0035ef;
+  --yellow: #fae14f;
+  --ink: #212121;
+  font-family: "Space Grotesk:Regular", sans-serif;
+  color: var(--ink);
+  background: white;
+  font-synthesis: none;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    background: white;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 4px;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.site-shell {
+  min-height: 100dvh;
+}
+
+.side-index {
+  position: fixed;
+  z-index: 20;
+  inset: 0 auto 0 0;
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 32px 34px;
+  color: var(--blue);
+  background: white;
+}
+
+.brand {
+  display: block;
+  width: max-content;
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.64px;
+  font-variation-settings: "wdth" 100;
+}
+
+.brand-subtitle,
+.issue-detail {
+  margin-top: 22px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.side-rule {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 44px 0 45px;
+  background: var(--blue);
+}
+
+.side-index nav {
+  display: grid;
+  gap: 26px;
+}
+
+.side-index nav button {
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.side-index nav button span {
+  display: block;
+}
+
+.side-manifesto {
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.24px;
+  font-variation-settings: "wdth" 100;
+}
+
+.issue-number {
+  margin-top: 105px;
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 112px;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -1.12px;
+  font-variation-settings: "wdth" 100;
+}
+
+.issue-detail {
+  margin-top: 34px;
+}
+
+main {
+  margin-left: 250px;
+}
+
+.blue-section,
+footer {
+  color: white;
+  background: var(--blue);
+}
+
+.section-label {
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.hero {
+  position: relative;
+  min-height: 755px;
+  padding: 47px 60px;
+  overflow: hidden;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  margin-top: 103px;
+}
+
+.hero h1 {
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: clamp(92px, 9.2vw, 132px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -1.32px;
+  font-variation-settings: "wdth" 100;
+}
+
+.hero-copy > p {
+  margin-top: 52px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 50px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 8px 24px;
+  font-size: 16px;
+  line-height: 1.2;
+  transition:
+    transform 150ms ease-out,
+    color 150ms ease-out,
+    background 150ms ease-out;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--light {
+  margin-top: 51px;
+  color: var(--blue);
+  background: white;
+}
+
+.hero-portrait {
+  position: absolute;
+  top: 159px;
+  right: 5%;
+  width: min(37.5%, 446px);
+  height: 520px;
+  overflow: hidden;
+  border-radius: 210px;
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-tag {
+  position: absolute;
+  z-index: 2;
+  right: 5%;
+  bottom: 91px;
+  width: 184px;
+  border-radius: 22px;
+  padding: 15px 18px;
+  color: var(--blue);
+  background: var(--yellow);
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.choices {
+  min-height: 485px;
+  padding: 28px 60px 50px;
+}
+
+.choices h2,
+.cinema > h2,
+footer h2 {
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.64px;
+  font-variation-settings: "wdth" 100;
+}
+
+.choices > p {
+  margin-top: 17px;
+  font-size: 16px;
+}
+
+.choice-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.choice-list button {
+  display: grid;
+  min-height: 76px;
+  cursor: pointer;
+  grid-template-columns: 80px 1fr 40px;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 999px;
+  padding: 0 25px;
+  text-align: left;
+  transition:
+    color 150ms ease-out,
+    background 150ms ease-out;
+}
+
+.choice-list button:hover {
+  color: var(--blue);
+  background: var(--yellow);
+}
+
+.choice-list span,
+.choice-list b {
+  color: var(--yellow);
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.choice-list button:hover span,
+.choice-list button:hover b {
+  color: var(--blue);
+}
+
+.choice-list strong {
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.36px;
+  font-variation-settings: "wdth" 100;
+}
+
+.choice-list b {
+  text-align: right;
+}
+
+.cinema {
+  min-height: 1100px;
+  padding: 44px 60px 27px;
+  color: var(--blue);
+  background: white;
+}
+
+.cinema > h2 {
+  margin-top: 35px;
+  font-size: 80px;
+  letter-spacing: -0.8px;
+}
+
+.featured-film {
+  display: grid;
+  width: 100%;
+  cursor: pointer;
+  grid-template-columns: minmax(0, 1.65fr) minmax(260px, 1fr);
+  gap: 52px;
+  margin-top: 74px;
+  text-align: left;
+}
+
+.featured-image {
+  position: relative;
+  display: block;
+  height: 410px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.featured-image > img,
+.film-card-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease-out;
+}
+
+.featured-film:hover .featured-image > img,
+.film-card:hover .film-card-image > img {
+  transform: scale(1.025);
+}
+
+.play-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 64px;
+  height: 64px;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.play-badge img {
+  width: 27px;
+}
+
+.play-badge--large {
+  width: 96px;
+  height: 96px;
+}
+
+.play-badge--large img {
+  width: 36px;
+}
+
+.featured-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 24px;
+}
+
+.featured-copy small {
+  font-size: 11px;
+}
+
+.featured-copy strong {
+  margin-top: 38px;
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.64px;
+  font-variation-settings: "wdth" 100;
+}
+
+.featured-copy span {
+  margin-top: 34px;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.featured-copy span + span {
+  max-width: 340px;
+  margin-top: 29px;
+}
+
+.featured-copy small:last-child {
+  margin-top: 48px;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 61px;
+}
+
+.film-card {
+  cursor: pointer;
+  text-align: left;
+}
+
+.film-card-image {
+  display: block;
+  height: 214px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.film-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.film-card-title strong {
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.36px;
+  font-variation-settings: "wdth" 100;
+}
+
+.film-card-title b {
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 24px;
+}
+
+.film-card > span:last-child {
+  display: block;
+  margin-top: 14px;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.image-credit {
+  margin-top: 37px;
+  font-size: 11px;
+}
+
+footer {
+  min-height: 260px;
+  padding: 48px 60px 28px;
+}
+
+footer p {
+  margin-top: 37px;
+  font-size: 16px;
+}
+
+footer small {
+  display: block;
+  margin-top: 51px;
+  font-size: 11px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  overflow-y: auto;
+  place-items: center;
+  padding: 30px;
+  background: rgb(0 17 78 / 72%);
+  animation: fade-in 200ms ease-out;
+}
+
+.film-modal {
+  position: relative;
+  width: min(960px, 100%);
+  min-height: 760px;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 43px 48px 23px;
+  background: white;
+}
+
+.modal-choice,
+.modal-caption {
+  color: var(--blue);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 48px;
+  display: grid;
+  width: 62px;
+  height: 54px;
+  cursor: pointer;
+  place-items: center;
+  border: 1px solid var(--blue);
+  border-radius: 27px;
+}
+
+.modal-close img {
+  width: 24px;
+  height: 24px;
+}
+
+.modal-image {
+  position: relative;
+  display: block;
+  height: 360px;
+  margin-top: 56px;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.modal-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 96px;
+  height: 96px;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.modal-play img {
+  width: 42px;
+  height: 42px;
+}
+
+.modal-heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-top: 35px;
+  color: var(--blue);
+}
+
+.modal-heading h2 {
+  font-family: "Fredoka:Bold", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.48px;
+  font-variation-settings: "wdth" 100;
+}
+
+.modal-heading p,
+.modal-description {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.modal-description {
+  max-width: 860px;
+  margin-top: 27px;
+}
+
+.modal-caption {
+  margin-top: 23px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.button--primary {
+  color: white;
+  background: var(--blue);
+}
+
+.button--outline {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  background: white;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .side-index {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 82px;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 24px;
+  }
+
+  .side-index > div:first-child {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .brand {
+    font-size: 44px;
+  }
+
+  .brand-subtitle,
+  .side-rule,
+  .side-edition {
+    display: none;
+  }
+
+  .side-index nav {
+    display: flex;
+    margin-left: auto;
+    gap: 18px;
+  }
+
+  .side-index nav button {
+    font-size: 13px;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  .hero-portrait {
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 760px) {
+  .side-index {
+    height: 70px;
+    padding: 12px 18px;
+  }
+
+  .brand {
+    font-size: 38px;
+  }
+
+  .side-index nav button span {
+    display: none;
+  }
+
+  .side-index nav button {
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 760px;
+    padding: 28px 24px 50px;
+  }
+
+  .hero-copy {
+    margin-top: 54px;
+  }
+
+  .hero h1 {
+    font-size: clamp(72px, 22vw, 104px);
+  }
+
+  .hero-copy > p {
+    margin-top: 34px;
+  }
+
+  .hero-portrait {
+    top: auto;
+    right: 24px;
+    bottom: 42px;
+    width: 220px;
+    height: 265px;
+  }
+
+  .hero-tag {
+    right: 22px;
+    bottom: 52px;
+    width: 150px;
+  }
+
+  .choices {
+    padding: 42px 24px 50px;
+  }
+
+  .choices h2,
+  .cinema > h2,
+  footer h2 {
+    font-size: 48px;
+  }
+
+  .choice-list button {
+    min-height: 70px;
+    grid-template-columns: 46px 1fr 24px;
+    padding: 0 18px;
+  }
+
+  .choice-list strong {
+    font-size: 23px;
+  }
+
+  .choice-list span,
+  .choice-list b {
+    font-size: 18px;
+  }
+
+  .cinema {
+    padding: 42px 24px 32px;
+  }
+
+  .featured-film {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 46px;
+  }
+
+  .featured-image {
+    height: 270px;
+  }
+
+  .featured-copy strong {
+    margin-top: 20px;
+    font-size: 52px;
+  }
+
+  .featured-copy span,
+  .featured-copy span + span,
+  .featured-copy small:last-child {
+    margin-top: 18px;
+  }
+
+  .film-grid {
+    grid-template-columns: 1fr;
+    margin-top: 55px;
+  }
+
+  footer {
+    padding: 45px 24px 28px;
+  }
+
+  .modal-backdrop {
+    align-items: start;
+    padding: 12px;
+  }
+
+  .film-modal {
+    min-height: auto;
+    border-radius: 22px;
+    padding: 28px 22px 24px;
+  }
+
+  .modal-close {
+    top: 16px;
+    right: 18px;
+    width: 52px;
+    height: 46px;
+  }
+
+  .modal-image {
+    height: min(55vw, 300px);
+    margin-top: 55px;
+  }
+
+  .modal-play {
+    width: 72px;
+    height: 72px;
+  }
+
+  .modal-play img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-heading {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    margin-top: 26px;
+  }
+
+  .modal-heading h2 {
+    font-size: 42px;
+  }
+
+  .modal-description {
+    margin-top: 22px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

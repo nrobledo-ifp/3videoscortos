@@ -1,0 +1,11 @@
+{
+  "title": "ejemplofigmamakebcn",
+  "description": "Página web que reúne tres enlaces de video en un solo lugar para facilitar el acceso y compartir contenido.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
